@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>Project Plot 1</title>
+<meta charset="iso-8859-1">
+<link rel="stylesheet" href="styles/layout.css" type="text/css">
+<!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+<div class="wrapper row1">
+  <header id="header" class="clear">
+    <div id="hgroup">
+      <h1><a href="#">Food Recommendations</a></h1>
+
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="home.html">Plot A</a></li>
+        <li><a href="#">Plot B</a></li>
+
+      </ul>
+    </nav>
+  </header>
+</div>
+<!-- content -->
+<div class="wrapper row2">
+  <div id="container" class="clear">
+    <!-- Slider -->
+    <section id="slider" class="clear">
+      <figure><img src="images/demo/food.jpg" alt="">
+        <figcaption>
+          <h2> Restuarant suggestions based on taste </h2>
+          <p> Re-defining the search for food based on personalized approach. Yelp dataset is explored from a new dimension.
+            A brief introduction consists of motivation and a possible approach with data pre-processing to achieve goal </p>
+
+        </figcaption>
+      </figure>
+    </section>
+    <!-- main content -->
+    <div id="intro">
+      <section class="clear">
+        <!-- article 1 -->
+        <article class="two_quarter">
+          <h1><b>PLOT A</b></h1>
+          <br>
+          <h2>Motivation</h2>
+          <p> Taste can be best described by dishes. The main objective is to make worth that one spends on eating outside. If you visit a new/unknown city, you can get best suggestions to eat based on what you love
+            to eat depending on your location. Suppose, someone who likes to eat lebanese food. For example, one particularly likes chicken shwarma and hummus a lot
+            ,he/she should get suggestions for places that make it best.Taking another example, the taste of starbucks coffee differ from store to store.
+            My favorite is Java Chip lite but I don't like it at every store. So I would like to have best Java Chip coffee everytime,
+             I spend money.I would like to get suggestions for a store that makes it good.
+            A novel approach that might get you best of what you love.  </p>
+
+          <h2>Approach</h2>
+          <p>My previous analysis shows that 'food' constitutes maximum weightage in rating of restaurant based on reviews. This approach is based on assumption that a user
+          writes reviews. So in this approach the input is taken as all reviews in which user rates a place as 4 star or 5 star. I am considering
+          uni-gram and bi-gram for name of a dish. A restaurant is assigned with dishes from its reviews that has more than 4 star or 5 star.
+          Similarly for a user, if he/she mentions name of dishes in review with high rating it is assigned to users profile.
+            If he/she doesn't take name of dish in review, top dishes (of restaurant) are assigned to that user.</p>
+          <p>When a user asks for suggestions, a similarity algorithm is applied for a user and all restaurants around him in a radius of 2 miles and suggested most similar
+          place to eat. If user has never given review, the system asks user for some input and gets suggestion based on it.</p>
+
+          <h3>Data Pre-Processing</h3>
+          <p>The reviews have to be classified for every city and ratings that is available in Yelp data-set. After getting classified reviews,
+            it has to be further refined by removing stop words and tokenizing the uni-grams and bi-grams. A dat-set mentioning names of dishes have to be used to recognize dishes.
+          </p>
+            </article>
+
+      </section>
+    </div>
+
+
+  </div>
+</div>
+<!-- Footer -->
+<div class="wrapper row3">
+  <footer id="footer" class="clear">
+
+  </footer>
+</div>
+</body>
+</html>
